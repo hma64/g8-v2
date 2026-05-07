@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produit — GCA styMode</title>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="topbar-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.07 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92-.08z"/></svg><a href="tel:+21694827228" style="color:inherit">+216 94 827 228</a></span>
+        <span style="opacity:0.45">|</span><span>Livraison rapide 24–48h en Tunisie</span>
+      </div>
+      <div class="topbar-right"><div class="topbar-social"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.75)"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></div></div>
+    </div>
+  </div>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu"><span></span></button>
+      <a class="logo" href="index.html">
+        <img src="assets/logo-gca.png" width="48" height="48" alt="GCA styMode" />
+        <span>GCA</span> styMode
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" id="navHome">Accueil</a></li>
+        <li><a href="produits.html" id="navShop">Boutique</a></li>
+        <li><a href="index.html#categories" id="navCategories">Catégories</a></li>
+        <li><a href="index.html#contact" id="navContact">Contact</a></li>
+        <li><a href="produits.html" id="btnAllProducts">Voir tous les produits</a></li>
+        <li class="nav-lang-mobile">
+          <button type="button" class="lang-option nav-lang-opt" data-lang="fr" id="navLangFr">Français</button>
+          <button type="button" class="lang-option nav-lang-opt" data-lang="ar" id="navLangAr">العربية</button>
+        </li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-dropdown">
+          <button type="button" class="lang-toggle" id="langToggleBtn">Français</button>
+          <div class="lang-menu" id="langMenu">
+            <button type="button" class="lang-option" data-lang="fr" id="langOptionFr">Français</button>
+            <button type="button" class="lang-option" data-lang="ar" id="langOptionAr">العربية</button>
+          </div>
+        </div>
+        <button class="wishlist-nav-btn" id="openWishlistBtn" type="button" aria-label="Favoris">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span id="wishlistNavLabel">Favoris</span>
+          <span class="wishlist-count-badge" id="wishlistCountBadge">0</span>
+        </button>
+        <a class="cart-btn" href="produits.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" width="16" height="16" style="flex-shrink:0"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span id="cartLabelText">Panier</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee-bar" id="marqueeBar" style="display:none"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+  <main class="product-page-main container" id="productRoot">
+    <p style="margin: 24px 0;"><a href="produits.html" id="backLink" class="btn btn-outline" style="display: inline-flex">Retour à la boutique</a></p>
+    <div class="product-detail-grid">
+      <div>
+        <div class="main-image-box">
+          <img id="detailMainImage" src="" alt="" />
+        </div>
+        <div class="gallery" id="detailGallery"></div>
+      </div>
+      <div class="details-content">
+        <h1 id="detailName">—</h1>
+        <div class="details-price" id="detailPrice">0 DT</div>
+        <span class="badge details-category" id="detailCategory"></span>
+        <div class="detail-tag-text" id="detailTagText"></div>
+        <p id="detailDescription"></p>
+
+        <div class="option-group">
+          <span class="option-label" id="labelColor">Couleur</span>
+          <div class="option-buttons" id="colorOptions"></div>
+        </div>
+        <div class="option-group" id="usaGroup">
+          <span class="option-label" id="labelSizeUsa">Taille USA</span>
+          <div class="option-buttons" id="sizeOptionsUsa"></div>
+        </div>
+        <div class="option-group" id="eurGroup">
+          <span class="option-label" id="labelSizeEur">Taille EUR</span>
+          <div class="option-buttons" id="sizeOptionsEur"></div>
+        </div>
+
+        <div class="stock-msg" id="stockMsg" aria-live="polite"></div>
+
+        <div class="order-panel">
+          <div class="error-text" id="selectionError"></div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <button type="button" class="btn btn-primary" id="addToCartBtn">Ajouter au panier</button>
+            <button type="button" class="wish-btn" id="detailWishBtn" aria-label="Ajouter aux favoris" style="position:static;width:44px;height:44px;border:1px solid #ddd;border-radius:999px;flex-shrink:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="related-products" id="relatedProductsSection" style="display:none">
+      <div class="related-products-header">
+        <h2 id="relatedProductsTitle">Vous aimerez aussi</h2>
+      </div>
+      <div class="related-products-grid" id="relatedProductsContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-gca.png" alt="GCA styMode" />
+          <h3>GCA styMode</h3>
+          <p>Créations artisanales faites main en Tunisie.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/ste.globale.couture.artisanale" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.75)"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://wa.me/21694827228" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.75)"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="produits.html">Boutique</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Service client</h4><ul><li><a href="#">Livraison</a></li><li><a href="#">Retours</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><strong>Tél</strong><a href="tel:+21694827228" style="color:rgba(255,255,255,0.55)">+216 94 827 228</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">GCA styMode — © <span id="year"></span></div>
+    </div>
+  </footer>
+
+  <div class="wishlist-dim" id="wishlistDim"></div>
+  <aside class="wishlist-drawer" id="wishlistDrawer" aria-hidden="true">
+    <div class="wishlist-head">
+      <strong id="wishlistDrawerTitle">Mes favoris</strong>
+      <button class="wishlist-close-btn" id="closeWishlistBtn" type="button" aria-label="Fermer">✕</button>
+    </div>
+    <div class="wishlist-items" id="wishlistItems"></div>
+  </aside>
+
+  <script type="module" src="js/cat-navbar.js"></script>
+  <script type="module" src="js/marquee-ad.js"></script>
+  <script type="module" src="js/product-page.js"></script>
+</body>
+</html>
